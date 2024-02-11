@@ -28,9 +28,9 @@ const CarouselBanner = ({ movies }: { movies: Movie[] }) => {
               width={1920}
               key={movie.id}
             />
-            <div className="hidden md:inline absolute inset-0 z-20 bg-gradient-to-r from-gray-900/90 via-transparent to-transparent">
+            <div className="hidden md:inline absolute inset-0 z-50 bg-gradient-to-r from-gray-900/90 via-transparent to-transparent">
               <div className="absolute left-10 top-1/2 -translate-y-1/2 z-20">
-                <h2 className="text-5xl font-bold max-w-xl z-50">
+                <h2 className="text-5xl font-bold max-w-xl">
                   {movie.title}
                 </h2>
                 <p className="max-w-xl line-clamp-3">{movie.overview}</p>
