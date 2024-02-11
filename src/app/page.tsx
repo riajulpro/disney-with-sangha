@@ -1,13 +1,24 @@
 import MoviesCarousel from "@/components/MoviesCarousel";
+import {
+  getPopularMovies,
+  getTopRatedMovies,
+  getUpcomingMovies,
+} from "@/lib/getMovies";
+import { Movie } from "../../typing";
+import CarouselBannerWrapper from "@/components/CarouselBannerWrapper";
 
 const IndexPage = async () => {
-  
+  const upcomingMovies = await getUpcomingMovies();
+  const topRatedMovies = await getTopRatedMovies();
+  const popularMovies = await getPopularMovies();
+
   return (
     <div>
-      <h1 className="text-3xl font-bold">Welcome</h1>
-      {/* MoviesCarousels */}
-      <div className="flex flex-col space-y-2 xl:-mt-48">
-        <MoviesCarousel movies={[]} title="Upcoming" />
+      <CarouselBannerWrapper />
+      <div className="flex flex-col space-y-2 lg:-mt-48">
+        <MoviesCarousel movies={upcomingMovies} title="Upcoming" />
+        <MoviesCarousel movies={topRatedMovies} title="Top Rated" />
+        <MoviesCarousel movies={popularMovies} title="Popular" />
       </div>
     </div>
   );

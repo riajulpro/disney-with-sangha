@@ -6,6 +6,14 @@ const nextConfig = {
         protocol: "https",
         hostname: "i.ibb.co",
       },
+      {
+        protocol: "https",
+        hostname: "link.papareact.com",
+      },
+      {
+        protocol: "http",
+        hostname: "image.tmdb.org",
+      },
     ],
   },
 };
