@@ -28,18 +28,18 @@ const CarouselBanner = ({ movies }: { movies: Movie[] }) => {
               width={1920}
               key={movie.id}
             />
-            <div className="hidden md:inline absolute inset-0 z-50 bg-gradient-to-r from-gray-900/90 via-transparent to-transparent">
+
+            <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent to-gray-300 dark:to-[#1A1C29]" />
+
+            <div className="hidden md:inline absolute inset-0 z-50 bg-gradient-to-r from-gray-900/80 via-transparent to-transparent">
               <div className="absolute left-10 top-1/2 -translate-y-1/2 z-20">
-                <h2 className="text-5xl font-bold max-w-xl">
-                  {movie.title}
-                </h2>
+                <h2 className="text-5xl font-bold max-w-xl">{movie.title}</h2>
                 <p className="max-w-xl line-clamp-3">{movie.overview}</p>
               </div>
             </div>
           </div>
         ))}
       </div>
-      <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent to-gray-300 dark:to-[#1A1C29]" />
     </div>
   );
 };
